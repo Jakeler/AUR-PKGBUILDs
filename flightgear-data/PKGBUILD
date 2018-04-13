@@ -1,0 +1,23 @@
+# Contributor: Jake <aur@ja-ke.tech>
+# Contributor: Sergej Pupykin <pupykin.s+arch@gmail.com>
+# Contributor: William Rea <sillywilly@gmail.com>
+# Contributor: Hans Janssen <hans@janserv.xs4all.nl>
+
+pkgname=flightgear-data
+pkgver=2018.1.1
+_pkgver=${pkgver%.*}
+pkgrel=1
+pkgdesc="Base-Data for the opensource flight-simulator."
+arch=(any)
+license=('GPL')
+url="http://www.flightgear.org/"
+options=(!strip)
+source=("http://downloads.sourceforge.net/project/flightgear/release-${_pkgver}/FlightGear-${pkgver}-data.tar.bz2")
+sha512sums=('022f102f95c9cd8b153d991dad55ecd182e71aa0f3ecfe1502a35d6dcda0746a1fd183f808e59aba8c7f3a0cc9ae1f2f91ff49565bff4c7bc5a1c4889fcc127f')
+
+package() {
+  cd "$srcdir"
+  mkdir -p "$pkgdir"/usr/share/flightgear
+  mv fgdata/ "$pkgdir"/usr/share/flightgear/data
+  #chown root:root "$pkgdir"/usr/share/flightgear/data
+}
