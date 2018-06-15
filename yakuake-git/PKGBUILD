@@ -1,7 +1,7 @@
 # Maintainer: Gustavo Alvarez <sl1pkn07@gmail.com>
 
 pkgname=yakuake-git
-pkgver=v3.0.2.6.g87f7321
+pkgver=v3.0.5.2.g02dd8ab
 pkgrel=1
 pkgdesc="A drop-down terminal emulator based on KDE Konsole technology. (GIT version)"
 arch=('i686' 'x86_64')
@@ -18,8 +18,10 @@ makedepends=('extra-cmake-modules'
              )
 conflicts=('yakuake')
 provides=('yakuake')
-source=('git://anongit.kde.org/yakuake.git')
-sha1sums=('SKIP')
+source=('git://anongit.kde.org/yakuake.git'
+        'blur.diff::https://phabricator.kde.org/file/data/scvjlluzbhnln2d6dbny/PHID-FILE-gwymmircmhmf7c5frpnq/D10063.diff')
+sha1sums=('SKIP'
+          'bd50773c687c67c659e721efc0835f207aac7c53')
 
 pkgver() {
   cd yakuake
@@ -28,6 +30,8 @@ pkgver() {
 
 prepare() {
   mkdir -p build
+  cd yakuake
+  patch -Np1 -i ../blur.diff 
 }
 
 build() {
