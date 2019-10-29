@@ -1,6 +1,6 @@
 pkgbase = dsview
 	pkgdesc = Client software that supports the DreamSourceLab logic analyzer
-	pkgver = 0.99
+	pkgver = 1.01
 	pkgrel = 1
 	url = http://www.dreamsourcelab.com/
 	arch = i686
@@ -12,10 +12,10 @@ pkgbase = dsview
 	depends = libsigrokdecode4dsl
 	depends = libsigrok4dsl
 	depends = fftw
-	source = https://github.com/DreamSourceLab/DSView/archive/0.99.tar.gz
+	source = https://github.com/DreamSourceLab/DSView/archive/v1.01.tar.gz
 	source = udev.rules
 	source = dsview.desktop
-	sha512sums = bb773a86757ea74442c73e6068398e9d39455fbbda578af1eccf405ad52063391e698301e9f6393462621e0f412a598ccecaceaa152cb696111ed42b79501998
+	sha512sums = 2e909f61f50c3989d599e8e3b2c1f1652d90579d11e0f7965b543883f94ece9f9122e6549935c931f940736545c1fc8dc52dbc9a6bc568a507e338246b28fbbf
 	sha512sums = 64de76cfa9ed23de2a0ae81219742f8660a82d5b89bc16b903b22b57f786cb69b6c249f972f467ff387675f3217cba6af26908e0819c282688e46310fd5b0922
 	sha512sums = 6004b6a2be8185bf3a7962135c8eb557767a578b67d500cd17502c62a844a61ee531974a8ab9203943ddf439c2dd67a4b97dcec960cffb4253aca3d0f949fc85
 

@@ -4,7 +4,7 @@
 # Contributor: Jake <aur@ja-ke.tech>
 
 pkgname=dsview
-pkgver=0.99
+pkgver=1.01
 pkgrel=1
 pkgdesc="Client software that supports the DreamSourceLab logic analyzer"
 arch=('i686' 'x86_64')
@@ -13,10 +13,10 @@ license=('GPL3')
 depends=('boost-libs' 'qt5-base' 'libsigrokdecode4dsl' 'libsigrok4dsl' 'fftw')
 makedepends=('boost')
 
-source=("https://github.com/DreamSourceLab/DSView/archive/${pkgver}.tar.gz"
+source=("https://github.com/DreamSourceLab/DSView/archive/v${pkgver}.tar.gz"
         'udev.rules'
         'dsview.desktop')
-sha512sums=('bb773a86757ea74442c73e6068398e9d39455fbbda578af1eccf405ad52063391e698301e9f6393462621e0f412a598ccecaceaa152cb696111ed42b79501998'
+sha512sums=('2e909f61f50c3989d599e8e3b2c1f1652d90579d11e0f7965b543883f94ece9f9122e6549935c931f940736545c1fc8dc52dbc9a6bc568a507e338246b28fbbf'
             '64de76cfa9ed23de2a0ae81219742f8660a82d5b89bc16b903b22b57f786cb69b6c249f972f467ff387675f3217cba6af26908e0819c282688e46310fd5b0922'
             '6004b6a2be8185bf3a7962135c8eb557767a578b67d500cd17502c62a844a61ee531974a8ab9203943ddf439c2dd67a4b97dcec960cffb4253aca3d0f949fc85')
 
@@ -44,9 +44,7 @@ package() {
   install -Dm644 "$srcdir/dsview.desktop" "$pkgdir/usr/share/applications/dsview.desktop"
   install -Dm644 "$srcdir/udev.rules" "$pkgdir/usr/lib/udev/rules.d/20-dsview.rules"
   
-  for i in 16 32 48 64 128 256; do
-    install -Dm644 icons/logo_${i}.png "${pkgdir}/usr/share/icons/hicolor/${i}x${i}/apps/${pkgname}.png"
-  done
+  install -Dm644 icons/logo.png "${pkgdir}/usr/share/icons/hicolor/256x256/apps/${pkgname}.png"
 }
 
 # vim:set ts=2 sw=2 et:
