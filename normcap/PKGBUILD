@@ -1,7 +1,8 @@
 # Maintainer: Mark Wagie <mark dot wagie at tutanota dot com>
+# Contributor: Jake <aur@ja-ke.tech>
 pkgname=normcap
 pkgver=0.2.8
-pkgrel=1
+pkgrel=2
 pkgdesc="OCR powered screen-capture tool to capture information instead of images"
 arch=('any')
 url="https://dynobo.github.io/normcap"
@@ -16,12 +17,12 @@ sha256sums=('12cc81b31da0a43c50faa50bfe8f244e85a83c42937efc422f5018f7ca253d9d'
 
 build() {
   cd "$pkgname-$pkgver"
-  poetry build --format wheel
+  python setup.py build
 }
 
 package() {
   cd "$pkgname-$pkgver"
-  PIP_CONFIG_FILE=/dev/null pip install --isolated --root="$pkgdir" --ignore-installed --no-deps dist/*.whl
+  python setup.py install --root="$pkgdir" --optimize=1
 
   local site_packages=$(python -c "import site; print(site.getsitepackages()[0])")
 
