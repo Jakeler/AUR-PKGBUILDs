@@ -1,0 +1,30 @@
+pkgbase = platformio
+	pkgdesc = A cross-platform code builder and library manager
+	pkgver = 5.2.3
+	pkgrel = 1
+	url = https://github.com/platformio/platformio-core/
+	arch = any
+	license = Apache
+	depends = python-setuptools
+	depends = python-bottle
+	depends = python-click
+	depends = python-colorama
+	depends = python-pyserial>=3.4
+	depends = python-requests
+	depends = python-semantic-version
+	depends = python-tabulate
+	depends = python-pyelftools
+	depends = python-marshmallow
+	depends = python-zeroconf
+	depends = python-aiofiles
+	depends = python-ajsonrpc
+	depends = python-starlette
+	depends = python-wsproto
+	depends = uvicorn
+	optdepends = python-click-completion: for shell completions
+	optdepends = python-shellingham: for shell completions
+	conflicts = platformio-git
+	source = https://github.com/platformio/platformio-core/archive/v5.2.3.tar.gz
+	sha256sums = c7288e3027a88ddd1f47168faecf9d5875930bd222effbc1da8b1be5fd328cf4
+
+pkgname = platformio
