@@ -1,0 +1,4 @@
+#!/usr/bin/sh
+
+cd /usr/lib/cncjs
+env NODE_PATH=dist/cncjs/node_modules/ ./bin/cncjs "$@"
