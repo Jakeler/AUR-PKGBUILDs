@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Betaflight Blackbox Explorer
+Comment=Crossplatform blackbox analitics tool for Betaflight flight control system
+Exec=blackbox-explorer
+Icon=blackbox-explorer
+Categories=Utility
+Terminal=false
+Type=Application
+MimeType=application/x-blackboxlog
