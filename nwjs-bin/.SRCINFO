@@ -1,0 +1,21 @@
+pkgbase = nwjs-bin
+	pkgdesc = An app runtime based on Chromium and node.js.
+	pkgver = 0.58.0
+	pkgrel = 1
+	url = https://nwjs.io/
+	arch = x86_64
+	license = MIT
+	depends = gtk3
+	depends = nss
+	depends = libxss
+	optdepends = nodejs: npm package support
+	optdepends = nw-gyp: native add-on build tool for node-webkit
+	provides = nwjs
+	provides = node-webkit
+	conflicts = nwjs
+	conflicts = node-webkit
+	replaces = node-webkit
+	source = nwjs-bin-0.58.0.tar.gz::http://dl.nwjs.io/v0.58.0/nwjs-v0.58.0-linux-x64.tar.gz
+	sha256sums = c53c8ce5c8d2419217edad07bc889ae5c55dccdb426af1b3a3fff6a5d540689d
+
+pkgname = nwjs-bin
