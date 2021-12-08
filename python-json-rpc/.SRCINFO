@@ -1,0 +1,14 @@
+pkgbase = python-json-rpc
+	pkgdesc = JSON-RPC 1/2 transport implementation
+	pkgver = 1.13.0
+	pkgrel = 1
+	url = https://github.com/pavlov99/json-rpc
+	arch = any
+	license = MIT
+	makedepends = python-setuptools
+	depends = python
+	options = !emptydirs
+	source = https://pypi.org/packages/source/j/json-rpc/json-rpc-1.13.0.tar.gz
+	sha256sums = def0dbcf5b7084fc31d677f2f5990d988d06497f2f47f13024274cfb2d5d7589
+
+pkgname = python-json-rpc
