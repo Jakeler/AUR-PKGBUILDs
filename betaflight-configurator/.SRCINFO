@@ -1,0 +1,21 @@
+pkgbase = betaflight-configurator
+	pkgdesc = Crossplatform configuration tool for the Betaflight flight control system
+	pkgver = 10.7.1
+	pkgrel = 1
+	url = https://github.com/betaflight/betaflight-configurator
+	install = betaflight-configurator.install
+	arch = x86_64
+	license = GPL3
+	makedepends = yarn
+	makedepends = npm
+	makedepends = git
+	depends = nwjs-bin
+	options = !strip
+	source = git+https://github.com/betaflight/betaflight-configurator.git#tag=10.7.1
+	source = betaflight-configurator.sh
+	source = betaflight-configurator.desktop
+	sha512sums = SKIP
+	sha512sums = 1f9113fce812355d1f8cc614d4905845c601622b87aad2b6e74b62913582018a87059727a333db0673a4b767a10564389eece1f588658d171dc4d8446055a0e9
+	sha512sums = 79e5ab59cf8520ce7e20fb2bd89ee99ce3debba69e7da892bf219912cc32c7056a7c8fd6dae19eebfe4956c948d0bc75ece40911b203fcc2f34e43f2d8329532
+
+pkgname = betaflight-configurator
