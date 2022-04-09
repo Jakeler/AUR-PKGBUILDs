@@ -11,7 +11,7 @@ pkgbase = freetube
 	makedepends = yarn
 	depends = gtk3
 	depends = nss
-	depends = electron
+	depends = electron16
 	source = https://github.com/FreeTubeApp/FreeTube/archive/v0.16.0-beta.tar.gz
 	source = package-only-necessary.diff
 	source = freetube.desktop
@@ -19,6 +19,6 @@ pkgbase = freetube
 	sha256sums = d1d60c0cea854986b2ab5a20d47af82d021ea79082c273c53d983b1797e2604f
 	sha256sums = ccb774571df6fcf7b1cd62cdf45c0345179a682fe8856c0011f846fe9bf50c8a
 	sha256sums = 928f0d7f07afdecf35fcf48ba109ab7e28f51bb233327263faa2c0499d669581
-	sha256sums = 9a8b5f1a5fabd1c6cbd9300163dd079d7663c8a7571402678ee1d875ef9c030d
+	sha256sums = 802c0ce0c894f7b5ddb7aba35e4447ddc5d10d1e2232dcec820a4b5a5cafef71
 
 pkgname = freetube
