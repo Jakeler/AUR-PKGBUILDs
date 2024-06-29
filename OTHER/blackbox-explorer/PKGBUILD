@@ -27,14 +27,14 @@ prepare() {
 build() {
 	cd "$_reponame-$pkgver"
 	yarn install
-	./node_modules/.bin/gulp dist --linux64
+	yarn build
 }
 
 package() {
 	cd "$_reponame-$pkgver"
         install -d "$pkgdir/usr/share/$pkgname/"
 	cp -r dist/* "$pkgdir/usr/share/$pkgname/"
-	install -Dm644 "assets/linux/icon/bf_icon_128.png" "$pkgdir/usr/share/pixmaps/$pkgname.png"
+	install -Dm644 "dist/images/pwa/bf_icon_256.png" "$pkgdir/usr/share/pixmaps/$pkgname.png"
 	install -Dm644 "$srcdir/$pkgname.desktop" "$pkgdir/usr/share/applications/$pkgname.desktop"
 	
         install -d "$pkgdir/usr/bin/"
